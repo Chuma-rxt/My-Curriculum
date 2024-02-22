@@ -73,4 +73,50 @@ nav .inner button{
     color: var(--pure);
     font-size: 14px;
     border-radius: 4px;
+} 
+
+  section.profile {
+    background: var(--black);
+    display: flex;
+    align-items: center;
+    padding: 3rem;
+    margin-top: 60px;
+} 
+
+
+section.profile .left{
+    flex: 2;
+    display: flex;
+    align-items: center;
 }
+
+section.profile .right {
+    flex: 1;
+}
+section.profile .left h2{
+    color: var(--fade);
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+section.profile .left p{
+    color: var(--mild);
+    font-size: 14px;
+} 
+
+section.profile .left img{
+    width: 128px;
+    height: 128px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+section.profile .left .avatar_block{
+    position: relative;
+    margin-right: 2rem;
+}
+section.profile .left .avatar_block span{
+    
+}
+
