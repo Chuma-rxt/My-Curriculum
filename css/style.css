@@ -196,3 +196,30 @@ section.profile .right ul.socials li:nth-child(3) a {
     background: var(--linkedin);
 }
 
+.section_heading{
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--pure);
+    margin-bottom: 3rem;
+    text-shadow: 0 0 1px rgba(40, 54, 95, 0.1);
+    position: relative;
+}
+
+section {
+    padding: 3rem;
+}
+
+main {
+    background: var(--primary);
+}
+
+.section_heading:after {
+    content: '';
+    height: 3px;
+    width: 80px;
+    position: absolute;
+    top: 28px;
+    left: 0;
+    border: 1px dotted var(--danger);
+}
+
