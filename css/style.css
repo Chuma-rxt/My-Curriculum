@@ -19,6 +19,8 @@
         --success : #1ecab8;
         --danger : #f1646c;
         --dark-blue : #28365f;
+        --linkedin: #0077b5; /* LinkedIn Color */
+        --github: #211F1F; /* GitHub Color */
 }
 
 /* =====================Reset ==================== */
@@ -81,6 +83,8 @@ nav .inner button{
     align-items: center;
     padding: 3rem;
     margin-top: 60px;
+    clip-path: polygon(0 0, 100% 0, 100% 80%, 25% 100%, 0 80%);
+    padding-bottom: 4rem;
 } 
 
 
@@ -145,3 +149,41 @@ section.profile .right ul.contact li{
     margin-bottom: .7rem;
     font-size: 14px;
 }
+
+section.profile .right ul.contact li i {
+    font-size: 18px;
+    margin-right: 0.3rem;
+}
+
+section.profile .right ul.socials {
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+}
+
+section.profile .right ul.socials li{
+    margin-right: 0.3rem;
+}
+
+section.profile .right ul.socials li a {
+    display: inline-block;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    color: var(--pure);
+    line-height: 36px;
+    text-align: center;
+}
+
+section.profile .right ul.socials li:nth-child(1) a {
+    background: var(--secondary);
+}
+
+section.profile .right ul.socials li:nth-child(2) a {
+    background: var(--github);
+}
+
+section.profile .right ul.socials li:nth-child(3) a {
+    background: var(--linkedin);
+}
+
