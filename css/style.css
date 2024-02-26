@@ -454,6 +454,7 @@ section.work .wrapper .portfolio .tabs ul li a {
 section.work .wrapper .portfolio .tabs ul li a.active {
     border-color: var(--info);
     color: var(--info);
+    transition: all .3s ease-in-out;
 }
 
 section.work .wrapper .portfolio .portfolio_wrapper{

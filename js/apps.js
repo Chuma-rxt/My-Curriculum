@@ -141,6 +141,19 @@ links.forEach(link => {
             e.target.classList.add('active');
         });
     });
+
+
+
+    //=========Magnify pop up
+    $('.magnify').magnificPopup ({
+        type: 'image',
+        gallery: {
+            enabled : true
+        },
+        zoom : {
+            enable: true
+        }
+    })
 });
 
 
