@@ -46,5 +46,23 @@ function runCounter (){
 
 runCounter();
 
+let counterSection = document.querySelector('.counter_section');
+
+let options = {
+    rootMargin : '0px 0px -200px 0px'
+}
+
+let done = 0;
+
+const sectionObserver = new  IntersectionObserver (function(entries){
+    if (entries[0].isIntersecting && done!== 1){
+        done = 1;
+        runCounter();
+    }
+
+}, options)
+
+sectionObserver.observer(counterSection);
+
 
 });
