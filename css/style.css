@@ -474,3 +474,42 @@ section.work .wrapper .portfolio .portfolio_wrapper a img {
     height: 200px;
     object-fit: cover;
 }
+
+section.work .wrapper .slider_wrapper .icon_wrap {
+    color: var(--info);
+    font-size: 26px;
+    text-align: center;
+}
+
+section.work .wrapper .slider_wrapper .slider .slide p {
+    color: var(--ternary);
+    line-height: center;
+    text-align: center;
+    margin-bottom: 1rex;
+    padding-top: 2rem;
+
+}
+
+section.work .wrapper .slider_wrapper .slider .slide img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+section.work .wrapper .slider_wrapper .slider .slide h2 {
+    font-size: 16px;
+    color: var(--info);
+    margin-top: 1rem;
+}
+
+section.work .wrapper .slider_wrapper .slider .slide h6{
+    color: var(--ternary);
+    margin-top: 1rem;
+}
+
+section.work .wrapper .slider_wrapper .slider .slide{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
