@@ -21,6 +21,8 @@
         --dark-blue : #28365f;
         --linkedin: #0077b5; /* LinkedIn Color */
         --github: #211F1F; /* GitHub Color */
+        --dark-gray: #171f33;
+        --yellow: #f3c74d;
 }
 
 /* =====================Reset ==================== */
@@ -388,3 +390,24 @@ section.skills .skill_wrapper .skill-box .progress_wrap .progress_bar .tooltip {
 }
 
 
+section.counter_section{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    background: var(--dark-gray);
+}
+
+
+section.counter_section > div {
+    display: flex;
+    align-items: center;
+}
+
+
+section.counter_section > div i {
+    font-size: 42px;
+    margin-right: 5px;
+}
+
+section.counter_section > div:nth-child(1) i {
+    color: var(--yellow);
+}
