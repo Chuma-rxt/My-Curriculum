@@ -435,6 +435,8 @@ section.counter_section > div h5 {
 section.work .wrapper {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    align-items: center;
+    grid-gap: 60px
 }
 
 section.work .wrapper .portfolio .tabs ul{
@@ -512,4 +514,8 @@ section.work .wrapper .slider_wrapper .slider .slide{
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+section.work .wrapper .slider_wrapper {
+    overflow: hidden;
 }

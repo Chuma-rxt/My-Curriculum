@@ -153,7 +153,17 @@ links.forEach(link => {
         zoom : {
             enable: true
         }
-    })
+    });
+
+    // =============Slider=========
+    $('.slider').slick({
+        arrows: false,
+        autoplay: true
+      });
+
+
+
+      
 });
 
 
