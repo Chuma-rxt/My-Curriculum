@@ -34,7 +34,7 @@ function runCounter (){
 
                 counter.innerText = Math.ceil(displayedCount + step);
                 
-                setTimeout(countIt, 1);
+                setTimeout(countIt, 90);
             } else {
                 counter.innerText = target;
             }
@@ -55,6 +55,7 @@ let options = {
 let done = 0;
 
 const sectionObserver = new  IntersectionObserver (function(entries){
+    
     if (entries[0].isIntersecting && done!== 1){
         done = 1;
         runCounter();
@@ -62,7 +63,7 @@ const sectionObserver = new  IntersectionObserver (function(entries){
 
 }, options)
 
-sectionObserver.observer(counterSection);
+sectionObserver.observe(counterSection);
 
 
 });
