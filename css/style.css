@@ -36,7 +36,7 @@ body{
     font-family: "IBM Plex Sans", sans-serif;
     background: var(--dark);
     --webkit-font-smoothing: antialiased;
-    height: 5000px;
+    padding-bottom: 4rem;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -568,4 +568,55 @@ section.contact .wrapper .right .form_group{
     margin-bottom: 14px;
 }
 
-section.contact .wrapper .right .form_group {}
+section.contact .wrapper .right .form_group > div {
+    display: flex;
+    flex-direction: column;
+}
+
+section.contact .wrapper .right .form_group > div label {
+    color: var(--ternary);
+    margin-bottom: 8px;
+}
+
+section.contact .wrapper .right .form_group > div input, section.contact .wrapper .right .form_group.textarea_wrapper textarea{
+    padding: 10px;
+    border-radius: 4px;
+    background: transparent;
+    border: 1px solid var(--dark-blue);
+    color: var(--ternary);
+    font-size: 16px;
+}
+
+section.contact .wrapper .right .form_group > div input:focus, section.contact .wrapper .right .form_group.textarea_wrapper textarea                                :focus {
+    border-color: var(--secondary);
+    outline: none;
+}
+
+section.contact .wrapper .right .form_group.textarea_wrapper{
+    display: block;
+    width: 100%;
+}
+
+section.contact .wrapper .right button {
+    background: var(--info);
+    border: none;
+    padding: 1rem;
+    color: var(--pure);
+    font-size: 14px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+}
+
+section.contact .wrapper .right button:hover  {
+    background: var(--secondary);
+}
+
+footer{
+    background: var(--footer);
+    text-align: center;
+    padding: 2rem 0;
+    font-size: 14px;
+    color: var(--ternary);
+
+}
