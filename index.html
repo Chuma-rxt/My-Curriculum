@@ -96,8 +96,7 @@
                         supporting the company through the delivery of high quality work and
                         fostering my growth.
                     </p>
-                    <button>Download CV</button>
-
+                    <button id="download-cv">Download CV</button>
                 </div>
                 <div class="right">
                     <p>
@@ -127,6 +126,18 @@
                 </div>
             </div>
         </section>
+        
+        <script>
+            const downloadCVButton = document.getElementById('download-cv');
+            downloadCVButton.addEventListener('click', () => {
+                const cvUrl = 'file:///C:/Users/ChumaRaxothi/Downloads/My-Curriculum-vitae.pdf'; // Replace with the actual path to your CV file
+                const link = document.createElement('a');
+                link.href = cvUrl;
+                link.download = 'My-Curriculum-vitae.pdf'; // Replace with the desired name for the downloaded file
+                link.click();
+            });
+        </script>
+        
 
         <section class="skills">
             <h1 class="section_heading">Education % Skills</h1>
@@ -338,37 +349,37 @@
                     </div>
                     <div class="portfolio_wrapper">
                         <div class="item design">
-                            <a class="magnify" href="./images/software-development-costs-1128x635.jpg" title="something">
+                            <a class="magnify" href="./images/software-development-costs-1128x635.jpg" title="Online Booking Website">
                                 <img src="./images/software-development-costs-1128x635.jpg" alt="">
                             </a>
                         </div>
                         <div class="item frontend">
-                            <a class="magnify" href="./images/Screenshot 2024-02-26 104656.png" title="something">
+                            <a class="magnify" href="./images/Screenshot 2024-02-26 104656.png" title="Portfolio">
                                 <img src="./images/Screenshot 2024-02-26 104656.png" alt="">            
                             </a>
                         </div>
                         <div class="item backend">
-                            <a class="magnify" href="./images/cal.png" title="something">
+                            <a class="magnify" href="./images/cal.png" title="Financila Calculator">
                                 <img src="./images/cal.png" alt="">            
                             </a>
                         </div>
                         <div class="item backend">
-                            <a class="magnify" href="./images/net-banking-app.png" title="something">
+                            <a class="magnify" href="./images/net-banking-app.png" title="Banking App">
                                 <img src="./images/net-banking-app.png" alt="">            
                             </a>
                         </div>
                         <div class="item backend">
-                            <a class="magnify" href="./images/Metric.PNG" title="something">
+                            <a class="magnify" href="./images/Metric.PNG" title="Metric Conveter">
                                 <img src="./images/Metric.PNG" alt="">            
                             </a>
                         </div>
                         <div class="item simulation">
-                            <a class="magnify" href="./images/packet.png" title="something">
+                            <a class="magnify" href="./images/packet.png" title="Packet Tracer">
                                 <img src="./images/packet.png" alt="">            
                             </a>
                         </div>
                         <div class="item frontend">
-                            <a class="magnify" href="./images/poty.png" title="something">
+                            <a class="magnify" href="./images/poty.png" title="React Portfolio">
                                 <img src="./images/poty.png" alt="">            
                             </a>
                         </div>
@@ -379,7 +390,7 @@
             </div>
         </section>
 
-        <section class="contact">
+        <section class="contact" id="contact">
             <h1 class="section_heading">Contact Me</h1>
             <div class="wrapper">
                 <div class="left">
@@ -406,32 +417,66 @@
                     </div>
                 </div>
                 <div class="right">
-                    <form action="">
+                    <form action="" id="contact-form">
                         <div class="form_group">
                             <div>
-                                <label for="">Name</label>
-                                <input type="text">
+                                <label for="name">Name</label>
+                                <input type="text" name="FullName" id="name" required placeholder="Full Name">
                             </div>
                             <div>
-                                <label for="">Email</label>
-                                <input type="email">
+                                <label for="email">Email</label>
+                                <input type="email" name="Email" id="email" required placeholder="example@gmail.com">
                             </div>
                         </div>
-
+        
                         <div class="form_group textarea_wrapper">
                             <div>
-                                <label for="">Message</label>
-                                <textarea name="" id="" cols="30" rows="4"></textarea>
+                                <label for="message">Message</label>
+                                <textarea name="Message" id="message" cols="30" rows="4" required placeholder="Message"></textarea>
                             </div>
+                            <p class="contact__message" id="contact-message"></p>
                         </div>
                         <button type="submit">Submit Now</button>
                     </form>
-
                 </div>
-                
             </div>
-
         </section>
+        
+        <script src="https://cdn.jsdelivr.net/npm/emailjs-com/dist/email.min.js"></script>
+        <script>
+            (function () {
+                emailjs.init("wSaoVe3DwwbqMEtrt");
+            })();
+        
+            const contactForm = document.getElementById('contact-form');
+            const contactMessage = document.getElementById('contact-message');
+        
+            const sendEmail = (e) => {
+                e.preventDefault();
+        
+                // serviceID - templateID - #form - publicKey
+                emailjs.sendForm('service_u6vyocb', 'template_2oo3qwi', '#contact-form')
+                    .then(() => {
+                        // Show sent message
+                        contactMessage.textContent = 'Message sent successfully';
+        
+                        // Remove message after five seconds
+                        setTimeout(() => {
+                            contactMessage.textContent = '';
+                        }, 5000);
+        
+                        // Clear input fields
+                        contactForm.reset();
+                    })
+                    .catch(() => {
+                        // Show error message
+                        contactMessage.textContent = 'Message not sent (service error)';
+                    });
+            };
+        
+            contactForm.addEventListener('submit', sendEmail);
+        </script>
+        
     </main>
 
     <footer class="container">
@@ -452,5 +497,6 @@
     <script src="./plugins/magnify.js"></script>
     <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script src="./js/apps.js"></script> 
+    <script src="./js/email.js"></script>
 </body>
 </html>
