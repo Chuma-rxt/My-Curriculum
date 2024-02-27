@@ -519,3 +519,53 @@ section.work .wrapper .slider_wrapper .slider .slide{
 section.work .wrapper .slider_wrapper {
     overflow: hidden;
 }
+
+
+section.contact .wrapper {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-gap: 60px;
+    margin-top: 40px;
+    align-items: center;
+}
+
+section.contact .wrapper .left > div {
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+
+}
+
+section.contact .wrapper .left > div div:nth-child(1){
+    margin-right: 10px;
+}
+
+section.contact .wrapper .left i {
+    font-size: 30px;
+    color: var(--info);
+}
+
+section.contact .wrapper .left h4{
+    font-weight: 700;
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+section.contact .wrapper .left{
+    color: var(--ternary);
+}
+
+section.contact .wrapper .left h4 + span {
+    font-weight: 100;
+    font-size: 14px;
+}
+
+section.contact .wrapper .right .form_group{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 30px;
+    align-items: center;
+    margin-bottom: 14px;
+}
+
+section.contact .wrapper .right .form_group {}
