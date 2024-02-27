@@ -22,15 +22,22 @@
                 RAXOTHI.CV
             </div>
             <div>
-                <button>
+                <button id="print-cv">
                     <i class="uil uil-print"></i>
                     Print
                 </button>
             </div>
         </div>
-
-
     </nav>
+    
+    
+    <script>
+        const printCVButton = document.getElementById('print-cv');
+        printCVButton.addEventListener('click', () => {
+            window.print();
+        });
+    </script>
+    
 
     <main class="container">
         <section class="profile" id="profile_ripple">
@@ -61,28 +68,28 @@
                     </li>
                     <li>
                         <i class="ui uil-envelope"></i>
-                        <strong>Email : </strong> craxoti60@gmail.com
+                        <strong>Email : </strong> <a href="mailto:craxoti60@gmail.com">craxoti60@gmail.com</a>
                     </li>
                 </ul>
                 <ul class="socials">
                     <li>
-                        <a href="#">
+                        <a href="https://www.facebook.com/raxothi.chuma" target="_blank">
                             <i class="uil uil-facebook"></i>
                         </a>
                     </li>
                     <li>
-                        <a href="#">
+                        <a href="https://github.com/Chuma-rxt?tab=repositories" target="_blank">
                             <i class="uil uil-github"></i>
                         </a>
                     </li>
                     <li>
-                        <a href="#">
+                        <a href="https://www.linkedin.com/in/chuma-raxothi-784708257/" target="_blank">
                             <i class="uil uil-linkedin"></i>
                         </a>
                     </li>
-
                 </ul>
             </div>
+            
         </section>
 
         <section class="about">
@@ -233,7 +240,7 @@
                             </div>
                         </div>
                         <div class="skill-box">
-                            <h4>Cisco & Intro to Cybersecurity</h4>
+                            <h4>Cisco||Intro to Cybersecurity</h4>
                             <div class="progress_wrap">
                                 <span data-percentage="90" class="progress_bar">
                                     <span class="tooltip">90%</span>
