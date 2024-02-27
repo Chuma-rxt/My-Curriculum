@@ -156,10 +156,10 @@ links.forEach(link => {
     });
 
     // =============Slider=========
-    $('.slider').slick({
-        arrows: false,
-        autoplay: true
-      });
+    // $('.slider').slick({
+    //     arrows: false,
+    //     autoplay: true
+    //   });
 
  
 
